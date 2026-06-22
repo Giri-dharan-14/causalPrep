@@ -37,7 +37,7 @@ This script runs a full causal preprocessing pipeline that:
 | `hog_entropy_shape` | causal | Entropy of the HOG descriptor (texture complexity) |
 | `edge_density_shape` | causal | Fraction of pixels with high gradient magnitude |
 | `stroke_width_shape` | causal | Mean horizontal run-length of bright (digit) pixels |
-| `digit_area_shape` | causal | Fraction of pixels classified as digit |
+| `digit_area_shape` | spurious | Fraction of pixels classified as digit |
 | `aspect_ratio_shape` | causal | Bounding-box height/width of the digit region |
 | `mean_red_color` | spurious | Mean red-channel intensity of digit pixels |
 
@@ -76,7 +76,7 @@ python3 causalprep_coloredmnist1.py --data_dir /path/to/data --output_dir ./resu
 
 `--data_dir` must contain `train1.pt`, `train2.pt`, and `test.pt` (the standard ColoredMNIST `.pt` splits).
 
-unzip the data zip folder
+## unzip the data zip folder
 
 ### CLI arguments
 
